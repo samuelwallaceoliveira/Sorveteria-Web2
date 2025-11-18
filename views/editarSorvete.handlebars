@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Sorvete</title>
+</head>
+<body>
+    <form action="/sorvete/{{sorvete.id}}/editar" method="post">
+    <h2>Editar</h2>
+        <input type="text" name="sabor" placeholder="Insira um novo sabor">
+        <input type="text" name="valor" placeholder="Insira um novo valor">
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

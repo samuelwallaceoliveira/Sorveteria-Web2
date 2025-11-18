@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvetes</title>
+</head>
+<body>
+    <ul>
+        <a href="/sorvete/cadastrar">cadastar</a>
+    {{#each sorvetes}}
+        <li>
+            <label>Sabor: {{sabor}}</label>
+            <label>Valor: {{valor}}</label>
+        </li>
+
+        <a href="/sorvete/{{id}}/editar">editar</a>
+
+        <form action="/sorvete/excluir/{{id}}" method="post">
+            <button type="submit" onclick="return confirm('Certeza?')" >Excluir</button>
+        </form>
+    {{/each}}
+    </ul>
+</body>
+</html>
